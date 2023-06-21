@@ -12,12 +12,15 @@ function game(playerChoice) {
     let resultContainer = document.getElementById("container-result");
     resultContainer.innerHTML = "";
 
+    let counter = document.getElementById("counter");
+    counter.innerHTML = "";
+
     let userChoiceHeader = document.createElement("p");
     userChoiceHeader.textContent = "Tu elección: " + playerChoice;
     resultContainer.appendChild(userChoiceHeader);
 
     let computerChoiceHeader = document.createElement("p");
-    computerChoiceHeader.textContent = "Elección de la computadora: " + computerChoice;
+    computerChoiceHeader.textContent = "Computadora: " + computerChoice;
     resultContainer.appendChild(computerChoiceHeader);
 
     let gameResultHeader = document.createElement("h4");
@@ -39,6 +42,10 @@ function game(playerChoice) {
 
     gameResultHeader.textContent = gameResultText;
     resultContainer.appendChild(gameResultHeader);
+
+    let counterHeader = document.createElement("h4");
+    counterHeader.textContent = "Tú : " + playerScore + " | Computer : " + computerScore;
+    counter.appendChild(counterHeader);
 
     if (playerScore === 3 || computerScore === 3) {
       let finalResultHeader = document.createElement("h2");
