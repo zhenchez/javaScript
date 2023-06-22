@@ -30,8 +30,8 @@ function game(playerChoice) {
       gameResultText = "¡Es un empate!";
     } else if (
       (playerChoice === "✊" && computerChoice === "✂️") ||
-      (playerChoice === "✋" && computerChoice === "✋") ||
-      (playerChoice === "✂️" && computerChoice === "✊")
+      (playerChoice === "✋" && computerChoice === "✊") ||
+      (playerChoice === "✂️" && computerChoice === "✋")
     ) {
       gameResultText = "Tú ganas. ¡Felicidades!";
       playerScore++;
